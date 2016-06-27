@@ -1,0 +1,88 @@
+Spacewhale Platform
+Go For Real
+26 Jun 2016
+Tags: spacewhale, gaming
+
+Brian Corrigan
+Engineer, MadGlory
+brian@madglory.com
+http://madglory.com
+@genexp
+
+* Outline
+
+1. What is Go, and who uses it?
+2. Comparing Go and other languages
+3. Code examples
+4. Concurrency
+5. Getting started
+
+* Title of slide or section (must have asterisk)
+
+Some Text
+
+** Subsection
+
+- bullets
+- more bullets
+- a bullet with
+
+*** Sub-subsection
+
+Some More text
+
+  Preformatted text
+  is indented (however you like)
+
+Further Text, including invocations like:
+
+.code spacewhale-go-for-real/x.go /^func main/,/^}/
+.play spacewhale-go-for-real/x.go
+.image spacewhale-go-for-real/image.jpg
+.background spacewhale-go-for-real/image.jpg
+.iframe http://foo
+.link http://foo label
+.html spacewhale-go-for-real/file.html
+.caption _Gopher_ by [[http://www.reneefrench.com][Renée French]]
+.background images/susan.jpg
+
+Again, more text
+
+* Environment
+
+- Use `Make`
+- Follow 12-factor
+- Don't regurgitate internet memes
+- Use `.env`
+- Not in the way that you think
+- Go with the grain
+- Go is meant to be compiled to a binary.
+- You no longer distribute project directories
+- Things like migrations, fixtures etc. should all be compiled in.
+- There are a lot of good baked in libraries
+- The way you structure your workspace is weird, but in nice way
+- Goroutines are awesome, but don't overuse them
+- Architectural differences of a language where you can parallelize work (vs. multiple processes)
+- Dependency management is rough, godeps, glide, etc.
+- Testing is awesome
+- Benchmarking is awesome
+- Code linting is awesome
+- Cyclic dependencies are awesome
+- Coverage is awesome
+- go fmt is awesome
+- Metrics are awesome
+- expvar is awesome
+- Tooling space isn't what you're used to
+- Grew up alongside docker, so very good for targeted services
+- Some language features are really nice, Capital vs. lowercase functions
+- Interfaces are the shit
+- Lack of polymorphism is awesome,  uses interfaces instead
+- Lack of inheritence is awesome, uses composition instead
+- Every folder is a package, that's weird
+- Lightweight dev environment needed to be very productive, or IDE
+- Compiles to damn near everything
+- Works great in docker
+- Each to deploy at scale
+- Heroku cmd folder pattern is nice
+- doc.go in the root of any library
+- Documentation practically writes itself
