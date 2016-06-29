@@ -1,5 +1,5 @@
-Spacewhale Platform
 Go For Real
+Spacewhale Platform
 26 Jun 2016
 Tags: spacewhale, gaming
 
@@ -11,78 +11,165 @@ http://madglory.com
 
 * Outline
 
-1. What is Go, and who uses it?
-2. Comparing Go and other languages
-3. Code examples
-4. Concurrency
-5. Getting started
+1. Spacewhale
+2. Context
+3. Language
+4. Tooling
+5. Praxis
+6. Tips
 
-* Title of slide or section (must have asterisk)
+* Spacewhale
 
-Some Text
+- Online Service Platform
+- Microservice Chassis
+- Horizontally Scalable to 100MM+
+- Deploy to Containers / VMs / Metal
+- HTTP interface using JSON-RPC / gRPC / Other
+- Messaging using _TBD_
 
-** Subsection
+* Spacewhale: More
 
-- bullets
-- more bullets
-- a bullet with
+- Inspiration: Netflix
+- Approach: go-micro, go-kit
 
-*** Sub-subsection
+* A whale
 
-Some More text
+.image spacewhale-go-for-real/whale.jpg 520 1000
 
-  Preformatted text
-  is indented (however you like)
+* Language (1/2)
+- Statically typed
+- Tiny spec (70 pages?)
+- Actively developed
+- Big Company (TM) support
+- No polymorphism (Use interfaces)
+- No inheritance (Use composition)
 
-Further Text, including invocations like:
+* A whale
 
-.code spacewhale-go-for-real/x.go /^func main/,/^}/
-.play spacewhale-go-for-real/x.go
-.image spacewhale-go-for-real/image.jpg
-.background spacewhale-go-for-real/image.jpg
-.iframe http://foo
-.link http://foo label
-.html spacewhale-go-for-real/file.html
-.caption _Gopher_ by [[http://www.reneefrench.com][Renée French]]
-.background images/susan.jpg
+.image spacewhale-go-for-real/whale2.jpg 520 1000
 
-Again, more text
+* Language (2/2)
+- Built in concurrency primitives (Channels)
+- Simple over clever
+- Discourages bikeshedding with tooling
+- Nice conventions - Capital vs. lowercase functions
+- Rich standard lib
+- Bastard child of C, Java, Python, Bash
 
-* Environment
+* A whale
 
-- Use `Make`
-- Follow 12-factor
-- Don't regurgitate internet memes
-- Use `.env`
-- Not in the way that you think
-- Go with the grain
-- Go is meant to be compiled to a binary.
-- You no longer distribute project directories
-- Things like migrations, fixtures etc. should all be compiled in.
-- There are a lot of good baked in libraries
+.image spacewhale-go-for-real/whale3.jpg 520 1000
+
+* Tooling (1/2)
 - The way you structure your workspace is weird, but in nice way
-- Goroutines are awesome, but don't overuse them
-- Architectural differences of a language where you can parallelize work (vs. multiple processes)
-- Dependency management is rough, godeps, glide, etc.
+- Every folder is a package, that's weird
+- Dependency management is rough and unexpected (Godeps, Glide, etc.)
+- Compiles to damn near everything
+
+* A whale
+
+.image spacewhale-go-for-real/whale4.png 520 1000
+
+* Praxis (1/2)
+
+- `expvar` is awesome
+- `go fmt` is awesome
+- Code linting is awesome
+- Coverage is awesome
+- Cyclic dependency checking is awesome
+- Documentation checking is awesome
+- Metrics are awesome
+
+* A whale
+
+.image spacewhale-go-for-real/whale5.jpg 520 1000
+
+* Praxis (2/2)
+
+- We're not building webapps in Golang
+- Great for automation & command line tools, networking, services
+- Lightweight dev environment allows everyone to be very productive, or IDE
+- Grows with you
+- Interfaces are the shit
 - Testing is awesome
 - Benchmarking is awesome
-- Code linting is awesome
-- Cyclic dependencies are awesome
-- Coverage is awesome
-- go fmt is awesome
-- Metrics are awesome
-- expvar is awesome
-- Tooling space isn't what you're used to
-- Grew up alongside docker, so very good for targeted services
-- Some language features are really nice, Capital vs. lowercase functions
-- Interfaces are the shit
-- Lack of polymorphism is awesome,  uses interfaces instead
-- Lack of inheritence is awesome, uses composition instead
-- Every folder is a package, that's weird
-- Lightweight dev environment needed to be very productive, or IDE
-- Compiles to damn near everything
-- Works great in docker
-- Each to deploy at scale
-- Heroku cmd folder pattern is nice
-- doc.go in the root of any library
-- Documentation practically writes itself
+
+* A whale
+
+.image spacewhale-go-for-real/whale7.jpg 520 1000
+
+* Tips (1/5)
+
+- You no longer distribute project directories
+- Keep most things external, but compile everything else
+- Go is meant to be compiled to a binary.
+- Things like migrations, fixtures etc. should all be compiled in. (Yes)
+- Use `Make` to solve tooling fatigue
+- For APIs, follow 12-factor approach
+- Use `.env`
+
+* A whale
+
+.image spacewhale-go-for-real/whale8.jpg 520 1000
+
+* Tips (2/5)
+
+- Channels are awesome, but don't overuse them
+- If you have a hammer, everything looks like a nail
+
+* A whale
+
+.image spacewhale-go-for-real/whale9.jpg 520 1000
+
+* Tips (3/5)
+- Use Docker & Docker Compose for local development.
+- No more stupid things like stubbing database calls
+
+* A whale
+
+.image spacewhale-go-for-real/whale10.png 520 1000
+
+* Tips (4/5)
+- Heroku patterns are generally nice
+- `cmd` folder pattern is nice
+
+* A whale
+
+.image spacewhale-go-for-real/whale11.png 520 1000
+
+* Tips (5/5)
+- Use ALL the tooling
+- Join the community, practices are evolving quickly
+
+* A whale
+
+.image spacewhale-go-for-real/whale12.jpg 520 1000
+
+# * Title of slide or section (must have asterisk)
+#
+# Some Text
+#
+# ** Subsection
+#
+# - bullets
+# - more bullets
+# - a bullet with
+#
+# *** Sub-subsection
+#
+# Some More text
+#
+#   Preformatted text
+#   is indented (however you like)
+#
+# Further Text, including invocations like:
+#
+# .code spacewhale-go-for-real/x.go /^func main/,/^}/
+# .play spacewhale-go-for-real/x.go
+# .image spacewhale-go-for-real/image.jpg
+# .background spacewhale-go-for-real/image.jpg
+# .iframe http://foo
+# .link http://foo label
+# .html spacewhale-go-for-real/file.html
+# .caption _Gopher_ by [[http://www.reneefrench.com][Renée French]]
+# .background images/susan.jpg
